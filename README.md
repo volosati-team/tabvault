@@ -43,8 +43,15 @@ credentials it has no business holding. So the honest split:
    served by GitHub Pages at
    `https://volosati-team.github.io/tabvault/s/<id>.html` — a URL that keeps
    working after the tab list is long gone. When the backup folder is bound,
-   every HTML export is also written into it as `shared-<timestamp>.html`, so
-   publishing is `git add` + push, nothing more.
+   every HTML export is also written into it as `shared-<timestamp>.html`, and
+   publishing it is one command from a clone of the repo:
+
+   ```sh
+   ./share.sh ~/Drive/TabVault/shared-1730000000000.html my-collection
+   # -> https://volosati-team.github.io/tabvault/s/my-collection.html
+   ```
+
+   A live example: <https://volosati-team.github.io/tabvault/s/demo.html>.
 
 ## Sync between machines
 
