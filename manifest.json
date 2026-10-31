@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "TabVault",
+  "version": "0.2.0",
+  "description": "Archives every window but the one you keep, into files you own.",
+  "permissions": ["tabs", "storage", "contextMenus"],
+  "action": {
+    "default_title": "TabVault — заархивировать остальные окна"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

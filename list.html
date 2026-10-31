@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TabVault</title>
+    <link rel="stylesheet" href="list.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <h1>TabVault</h1>
+      <input id="search" type="search" placeholder="Поиск по заголовку и адресу" />
+      <div class="actions">
+        <button id="export-selected" type="button">Экспорт выбранного (HTML)</button>
+        <button id="export-all-html" type="button">Всё в HTML</button>
+        <button id="export" type="button">Экспорт JSON</button>
+        <label class="file-label">
+          Импорт
+          <input id="import" type="file" accept="application/json,.json,.html" hidden />
+        </label>
+        <button id="bind-folder" type="button">Папка для бэкапа</button>
+        <button id="select-none" type="button">Снять выбор</button>
+      </div>
+      <p id="folder-state" class="folder-state"></p>
+    </header>
+
+    <main id="groups"></main>
+    <p id="empty" class="empty" hidden>
+      Пусто. Нажми на иконку расширения — остальные окна свернутся сюда.
+    </p>
+
+    <script src="list.js"></script>
+  </body>
+</html>
